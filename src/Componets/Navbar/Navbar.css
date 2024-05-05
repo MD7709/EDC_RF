@@ -1,0 +1,109 @@
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #22c998;
+    color: #f5feff;
+    position: fixed;
+    width: 100%;
+    padding: 4px 0;
+    z-index: 10;
+
+}
+.logo
+{
+    height: 60px;
+}
+nav ul 
+{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+    margin-right: 40px;
+
+}
+.Menu-icon
+{
+  display: none;
+}
+.bor
+{
+  transition: 0.5s;
+}
+.bor::after
+{
+
+  display: block;
+  content: '';
+  margin-top: 1px;
+  border-bottom: solid 3px #f5feff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.bor:hover::after
+{
+  transform: scaleX(1);
+}
+.bor:hover:after
+{
+  transform-origin: 0% 50%;
+}
+.btn
+{
+  background-color: #ffff;
+  color: #212121;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+@media (max-width : 1000px) {
+  .logo
+  {
+    width: 140px;
+  }
+  nav ul li 
+  {
+    margin: 10px 15px ;
+
+  }
+}
+@media (max-width : 880px) {
+  .container
+  {
+    margin: 0;
+    padding: 0;
+  }
+ nav ul 
+ {
+  position: fixed;
+  top: 0;
+  right: -40px;
+  bottom: 0;
+  background: #22c998;
+  width: 200px;
+  z-index: -1;
+  padding-top: 70px;
+  transition: 0.5s;
+  flex-direction: column;
+ } 
+ .Menu-icon
+ {
+   display: block;
+   width: 40px;
+   cursor: pointer;  
+  padding-right: 48px;
+
+
+ }
+ .hide-mobile-menu
+ {
+  right: -300px;
+ }
+
+}
+
+

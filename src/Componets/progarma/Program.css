@@ -1,0 +1,77 @@
+.contaienr1
+{
+
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.Programs
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 80px auto;
+width: 90%;
+gap: 35px;
+}
+.Program img
+{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    display: block;
+ 
+}
+.Program
+{
+    flex-basis: 35%;
+    position: relative;
+}
+.caption1
+{
+    border-radius: 10px;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(0, 15, 152,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.4s;
+    padding-top: 70%;
+
+}
+.caption1 img
+{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.caption1 p 
+{
+    color: #fff;
+}
+.Program:hover .caption1
+{
+    opacity: 1;
+    padding-top: 0;
+}
+
+@media (max-width:800px) {
+    .Programs
+    {
+       flex-direction: column;
+    }
+    .Program 
+    {
+        margin: 10px;
+        flex-basis: 100%;
+
+    }
+}
